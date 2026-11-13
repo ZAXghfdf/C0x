@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#070303">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="الملف 3301 — وصلت إلى البوابة الأخيرة. ابحث عن مفتاح المرور، أكمل الشيفرة، وأثبت أنك لست مشاهداً عادياً.">
+  <meta property="og:title" content="CASE 3301 — المفتاح الأخير | فريق سايڤر">
+  <meta property="og:description" content="لقد أوشكت أن تصل إلى حل اللغز. هل تملك المفتاح؟">
+  <meta property="og:type" content="website">
+  <title>لاتمسحه! </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23070303'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23ff2738' stroke-width='1.5' stroke-dasharray='2 5'/%3E%3Cpath d='M32 17c-6 0-9 4-9 9 0 4 3 7 5 9l4 12 4-12c2-2 5-5 5-9 0-5-3-9-9-9Z' fill='none' stroke='%23f2e9df' stroke-width='1.6'/%3E%3Ccircle cx='28.5' cy='27' r='1.7' fill='%23ff2738'/%3E%3Ccircle cx='35.5' cy='27' r='1.7' fill='%23ff2738'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js', 'is-loading');</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#mainContent">تجاوز إلى المحتوى</a>
+
+  <!-- ============ SVG SPRITE ============ -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="cicada-mark" viewBox="0 0 400 400">
+        <g fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="200" cy="200" r="177" stroke-opacity=".18" stroke-dasharray="1 8"/>
+          <circle cx="200" cy="200" r="158" stroke-opacity=".55"/>
+          <circle cx="200" cy="200" r="149" stroke-opacity=".16"/>
+          <circle cx="200" cy="200" r="132" stroke-opacity=".1" stroke-dasharray="3 9"/>
+
+          <g stroke-opacity=".65">
+            <path d="M200 23v14"/>
+            <path d="M200 23v14" transform="rotate(30 200 200)"/>
+            <path d="M200 23v14" transform="rotate(60 200 200)"/>
+            <path d="M200 23v14" transform="rotate(90 200 200)"/>
+            <path d="M200 23v14" transform="rotate(120 200 200)"/>
+            <path d="M200 23v14" transform="rotate(150 200 200)"/>
+            <path d="M200 23v14" transform="rotate(180 200 200)"/>
+            <path d="M200 23v14" transform="rotate(210 200 200)"/>
+            <path d="M200 23v14" transform="rotate(240 200 200)"/>
+            <path d="M200 23v14" transform="rotate(270 200 200)"/>
+            <path d="M200 23v14" transform="rotate(300 200 200)"/>
+            <path d="M200 23v14" transform="rotate(330 200 200)"/>
+          </g>
+
+          <text x="200" y="356" text-anchor="middle" fill="currentColor" stroke="none" font-family="ui-monospace,monospace" font-size="12" letter-spacing="6" opacity=".65">3301</text>
+
+          <path d="M191 121C178 102 162 94 147 83" opacity=".8"/>
+          <path d="M209 121C222 102 238 94 253 83" opacity=".8"/>
+
+          <ellipse cx="200" cy="122" rx="21" ry="16"/>
+          <circle class="cicada-eye" cx="187" cy="117" r="4.2" fill="#e30613" stroke="none"/>
+          <circle class="cicada-eye" cx="213" cy="117" r="4.2" fill="#e30613" stroke="none"/>
+
+          <path d="M176 137C181 153 188 165 200 173C212 165 219 153 224 137C214 131 186 131 176 137Z"/>
+          <path d="M184 144C191 150 209 150 216 144" opacity=".35"/>
+
+          <path d="M200 171C187 183 182 203 186 226C189 250 195 273 200 291C205 273 211 250 214 226C218 203 213 183 200 171Z"/>
+          <path d="M188 204C196 209 204 209 212 204" opacity=".5"/>
+          <path d="M189 220C196 225 204 225 211 220" opacity=".5"/>
+          <path d="M191 237C197 241 203 241 209 237" opacity=".5"/>
+          <path d="M194 254C198 257 202 257 206 254" opacity=".5"/>
+          <path d="M200 176v106" opacity=".25"/>
+
+          <path d="M184 153C161 131 127 106 100 104C86 104 78 114 83 130C91 157 121 180 158 190C173 194 182 186 184 153Z"/>
+          <path d="M184 153C155 145 121 132 97 112" opacity=".35"/>
+          <path d="M180 163C158 160 131 150 111 135" opacity=".3"/>
+
+          <path d="M216 153C239 131 273 106 300 104C314 104 322 114 317 130C309 157 279 180 242 190C227 194 218 186 216 153Z"/>
+          <path d="M216 153C245 145 279 132 303 112" opacity=".35"/>
+          <path d="M220 163C242 160 269 150 289 135" opacity=".3"/>
+
+          <path d="M187 181C163 194 138 218 130 245C126 259 134 267 148 262C171 254 186 231 193 207"/>
+          <path d="M187 181C166 202 151 223 142 246" opacity=".3"/>
+          <path d="M213 181C237 194 262 218 270 245C274 259 266 267 252 262C229 254 214 231 207 207"/>
+          <path d="M213 181C234 202 249 223 258 246" opacity=".3"/>
+
+          <path d="M183 167C170 179 158 191 145 198M217 167C230 179 242 191 255 198" opacity=".35"/>
+          <path d="M186 192C174 211 164 225 156 240M214 192C226 211 236 225 244 240" opacity=".3"/>
+          <path d="M192 223C184 240 178 254 174 269M208 223C216 240 222 254 226 269" opacity=".25"/>
+
+          <path d="M200 60l3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="currentColor" stroke="none" opacity=".45"/>
+          <path d="M200 322l3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill="currentColor" stroke="none" opacity=".45"/>
+        </g>
+      </symbol>
+
+      <symbol id="icon-lock" viewBox="0 0 24 24">
+        <rect x="4.5" y="10.5" width="15" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="12" cy="15.5" r="1.5" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="icon-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="icon-copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M16 8V5a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="icon-x" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="icon-volume" viewBox="0 0 24 24">
+        <path d="M4 9.5v5h3.5L13 19V5L7.5 9.5H4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path class="sound-wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="icon-volume-off" viewBox="0 0 24 24">
+        <path d="M4 9.5v5h3.5L13 19V5L7.5 9.5H4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M16.5 9.5l5 5M21.5 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </symbol>
+
+      <symbol id="icon-shield" viewBox="0 0 24 24">
+        <path d="M12 3l7 3v5.5c0 4.5-3 7.8-7 9.5-4-1.7-7-5-7-9.5V6l7-3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        <path d="M8.8 12l2.2 2.2 4.4-4.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="icon-eye" viewBox="0 0 24 24">
+        <path d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+        <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="1.2" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="icon-arrow" viewBox="0 0 24 24">
+        <path d="M19 12H5M11 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ ATMOSPHERE ============ -->
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <div class="site-grid" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="blood-top" aria-hidden="true">
+    <svg viewBox="0 0 1440 240" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="bloodGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#490006"/>
+          <stop offset=".42" stop-color="#98000c"/>
+          <stop offset="1" stop-color="#e30613"/>
+        </linearGradient>
+        <filter id="bloodRough" x="-6%" y="-12%" width="112%" height="132%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.011 0.052" numOctaves="2" seed="17" result="noise"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+        <filter id="bloodGlow" x="-20%" y="-50%" width="140%" height="220%">
+          <feGaussianBlur stdDeviation="8" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <path fill="#3c0005" opacity=".55" filter="url(#bloodGlow)" d="M0 0h1440v48c-89 20-174 1-257 21-93 23-169 3-261-7-96-11-187 18-284 9C482 60 369 23 279 34 188 45 92 37 0 59Z"/>
+      <path fill="url(#bloodGradient)" filter="url(#bloodRough)" d="M0 0H1440V58C1409 66 1404 92 1388 92C1369 92 1378 56 1347 60C1319 64 1334 110 1315 139C1299 164 1287 128 1276 93C1267 62 1242 55 1224 69C1200 88 1215 134 1191 152C1172 166 1161 138 1159 102C1157 72 1131 61 1110 79C1090 96 1099 124 1083 130C1065 137 1057 104 1037 93C1014 80 997 96 992 123C987 150 970 162 956 140C941 117 950 72 920 64C895 57 876 77 879 106C882 138 864 154 847 137C831 121 841 82 814 69C790 58 771 75 774 103C777 132 757 159 741 141C725 123 739 83 714 68C691 54 669 71 673 101C676 130 655 154 640 134C626 116 638 78 613 65C591 53 570 70 574 97C578 127 557 151 541 131C527 113 539 78 515 68C494 59 477 78 480 101C483 125 466 143 452 127C439 112 448 79 427 69C408 60 392 76 393 98C394 120 376 130 364 113C352 96 359 65 336 60C315 55 300 72 300 91C300 113 281 125 268 108C257 94 264 65 241 60C221 56 207 73 206 93C205 112 188 122 176 104C165 88 174 62 152 58C133 55 122 72 121 90C120 109 105 120 92 100C80 82 88 57 66 56C46 55 35 72 34 88C33 104 16 108 0 100Z"/>
+      <g fill="#a3000d" opacity=".8" filter="url(#bloodRough)">
+        <path d="M1300 120c4 28 1 55 1 75 6 8 14 2 15-7 1-18-4-50-16-68Z"/>
+        <path d="M928 92c5 22 2 40 1 58 6 6 12 2 13-5 1-13-3-38-14-53Z"/>
+        <path d="M673 83c4 19 2 33 1 49 5 5 10 1 11-4 1-11-3-33-12-45Z"/>
+        <path d="M380 76c5 18 2 33 1 48 5 6 11 1 12-4 1-12-3-32-13-44Z"/>
+        <path d="M106 88c4 17 2 30 1 42 5 5 10 1 11-4 1-10-3-27-12-38Z"/>
+      </g>
+    </svg>
+  </div>
+  <div class="drips" aria-hidden="true">
+    <span style="--x: 14%; --w: 9px; --h: 56px; --d: 0s;"></span>
+    <span style="--x: 33%; --w: 6px; --h: 92px; --d: 2.8s;"></span>
+    <span style="--x: 52%; --w: 11px; --h: 44px; --d: 5.1s;"></span>
+    <span style="--x: 71%; --w: 7px; --h: 76px; --d: 1.4s;"></span>
+    <span style="--x: 88%; --w: 10px; --h: 62px; --d: 4.2s;"></span>
+  </div>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" role="region" aria-label="جارٍ تحميل الموقع">
+    <div class="loader__grid" aria-hidden="true"></div>
+    <div class="loader__inner">
+      <div class="loader__boot">
+        <span class="loader__boot-dot"></span>
+        <span dir="ltr">Cypher SECURE BOOT</span>
+        <span class="loader__boot-code" dir="ltr">v3.3.01</span>
+      </div>
+
+      <div class="loader__sigil" aria-hidden="true">
+        <span class="loader__ring"></span>
+        <span class="loader__ring loader__ring--reverse"></span>
+        <svg class="loader__cicada"><use href="#cicada-mark"></use></svg>
+        <span class="loader__cross loader__cross--a"></span>
+        <span class="loader__cross loader__cross--b"></span>
+      </div>
+
+      <div class="loader__titles">
+        <p class="loader__kicker" dir="ltr">DECRYPTING THE PATH</p>
+        <p class="loader__title">جارٍ فكّ الشيفرة</p>
+        <p class="loader__sub" id="loaderStatus" role="status" aria-live="polite">تهيئة القناة المشفّرة…</p>
+      </div>
+
+      <div class="loader__progress-wrap">
+        <div class="loader__numbers">
+          <span id="loaderCount" dir="ltr">000</span><span class="loader__percent">%</span>
+          <span class="loader__progress-label" dir="ltr">CASE_3301</span>
+        </div>
+        <div class="loader__track" role="progressbar" aria-label="نسبة تحميل الموقع" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="loader__bar" id="loaderBar"></span>
+        </div>
+        <div class="loader__metadata">
+          <span id="loaderLog" dir="ltr">> mounting encrypted volume...</span>
+          <span class="loader__blink" aria-hidden="true"></span>
+        </div>
+      </div>
+
+      <button class="loader__skip" id="skipIntro" type="button">تخطّي المقدمة <span aria-hidden="true">↘</span></button>
+    </div>
+    <div class="loader__footer" aria-hidden="true">
+      <span>Cypher-0x</span>
+      <span class="loader__footer-mid">NO TRACE. NO NOISE. ONLY THE TRUTH.</span>
+      <span>LOCAL SESSION</span>
+    </div>
+    <div class="loader__flash" aria-hidden="true"></div>
+  </div>
+
+  <div class="transition" id="transition" aria-hidden="true">
+    <div class="transition__noise"></div>
+    <div class="transition__blood" aria-hidden="true"></div>
+    <div class="transition__content">
+      <span class="transition__eyebrow" dir="ltr">CASE 3301 // IDENTITY CONFIRMED</span>
+      <div class="transition__glitch" id="transitionText" data-text="ACCESS GRANTED">ACCESS GRANTED</div>
+      <p class="transition__sub">تم التحقق من المفتاح — مرحباً بك في الجانب الآخر.</p>
+      <div class="transition__line"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ============ APP ============ -->
+  <div class="app" id="app">
+    <div class="topbar" id="topbar">
+      <a class="brand" href="#mainContent" aria-label="فريق سايڤر — 0x">
+        <span class="brand__mark">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><use href="#cicada-mark"></use></svg>
+        </span>
+        <span class="brand__text" dir="ltr">
+          <strong>Cypher<span>//</span>0x</strong>
+          <small>OPEN SOURCE INTELLIGENCE</small>
+        </span>
+      </a>
+
+      <div class="topbar__meta">
+        <span class="utc-clock" dir="ltr"><span class="utc-clock__dot"></span><time id="utcClock">--:--:--</time> UTC</span>
+        <span class="status-chip"><i></i><span id="sessionStatus" dir="ltr">SECURE CHANNEL</span></span>
+        <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="تشغيل الصوت">
+          <svg class="icon sound-toggle__icon" aria-hidden="true"><use href="#icon-volume-off"></use></svg>
+          <span class="sound-toggle__label">الصوت</span>
+        </button>
+      </div>
+    </div>
+
+    <main id="mainContent" tabindex="-1">
+      <!-- ================= CHALLENGE VIEW ================= -->
+      <section class="view view--challenge" id="challengeView" aria-labelledby="challengeTitle">
+        <div class="floating-code" aria-hidden="true">
+          <span style="--x: 6%; --y: 18%; --delay: 0s;">0x3301</span>
+          <span style="--x: 91%; --y: 27%; --delay: 2.2s;">DE AD BE EF</span>
+          <span style="--x: 10%; --y: 78%; --delay: 4.1s;">CICADA</span>
+          <span style="--x: 84%; --y: 72%; --delay: 1.2s;">KEY?</span>
+          <span style="--x: 72%; --y: 9%; --delay: 3.4s;">NO_TRACE</span>
+          <span style="--x: 22%; --y: 45%; --delay: 5.2s;">CA FE BA BE</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="content-col">
+            <p class="eyebrow reveal" style="--i: 0;">
+              <span class="eyebrow__line"></span>
+              <span class="eyebrow__ar">الملف 3301</span>
+              <span class="eyebrow__sep">/</span>
+              <span class="eyebrow__en" dir="ltr">FINAL SEQUENCE</span>
+            </p>
+
+            <h1 class="hero-title reveal" id="challengeTitle" tabindex="-1" style="--i: 1;">
+              <span class="hero-title__pre">تهانينا…</span>
+              لقد أوشكتَ أن تصل<br>
+              إلى <span class="accent">حلّ اللغز.</span>
+            </h1>
+
+            <p class="lead reveal" style="--i: 2;">
+              الآن تبقى عليك أن تأتي بمفتاح المرور، وستجده في
+              <strong>مقطع الإنستا</strong> في مكان ما…
+            </p>
+
+            <div class="key-format reveal" style="--i: 3;" aria-label="اضف الكود هنا">
+              <span class="key-format__label">FORMAT</span>
+              <code>k*****x</code>
+              <span class="key-format__cursor" aria-hidden="true"></span>
+              <span class="key-format__note">أكمل ما بعد البادئة</span>
+            </div>
+
+            <div class="access-panel reveal" id="accessPanel" style="--i: 4;">
+              <span class="corner corner--tl" aria-hidden="true"></span>
+              <span class="corner corner--tr" aria-hidden="true"></span>
+              <span class="corner corner--bl" aria-hidden="true"></span>
+              <span class="corner corner--br" aria-hidden="true"></span>
+
+              <div class="access-panel__head">
+                <span class="terminal-id"><i></i> TERMINAL 0x3301</span>
+                <span class="terminal-status" id="terminalStatus" dir="ltr">AWAITING KEY</span>
+              </div>
+
+              <form id="keyForm" novalidate>
+                <label class="field-label" for="keySuffix">
+                  <span>مفتاح المرور</span>
+                  <span class="field-label__en" dir="ltr">PASSKEY</span>
+                </label>
+
+                <div class="key-field" id="keyField">
+                  <span class="key-field__prefix" dir="ltr">ضع هنا المفتاح</span>
+                  <input
+                    id="keySuffix"
+                    name="key"
+                    type="text"
+                    dir="ltr"
+                    inputmode="text"
+                    autocomplete="off"
+                    autocapitalize="characters"
+                    spellcheck="false"
+                    maxlength="64"
+                    placeholder="••••••••••••"
+                    aria-describedby="formHint formError"
+                  >
+                  <span class="key-field__icon" aria-hidden="true">
+                    <svg class="icon"><use href="#icon-lock"></use></svg>
+                  </span>
+                </div>
+
+                <p class="form-note" id="formHint"> اضف مفتاح المرور أعلاه </p>
+                <p class="form-error" id="formError" role="alert" aria-live="assertive"></p>
+
+                <button class="btn btn--primary" id="submitBtn" type="submit">
+                  <span class="btn__label" id="submitLabel">فكّ الشيفرة</span>
+                  <span class="btn__icon" aria-hidden="true">
+                    <svg class="icon"><use href="#icon-arrow"></use></svg>
+                  </span>
+                  <span class="btn__scan" aria-hidden="true"></span>
+                </button>
+              </form>
+
+              <div class="help-row">
+                <span>هل تريد المساعدة؟</span>
+                <button class="hint-trigger" id="hintTrigger" type="button">
+                  <span>هنت</span>
+                  <span class="hint-trigger__mark" aria-hidden="true">؟</span>
+                  <span class="hint-trigger__line" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <p class="microcopy">المحاولات تُسجَّل داخل جلسة المتصفح فقط — لا شيء يُرسَل إلى أي خادم.</p>
+            </div>
+
+            <div class="mini-log reveal" style="--i: 5;">
+              <span id="consoleLine" dir="ltr">> awaiting_operator_input</span>
+              <span class="mini-log__cursor" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <aside class="visual-col reveal" style="--i: 1;" aria-label="شعار الملف 3301">
+            <div class="emblem-stage" id="emblemStage">
+              <span class="emblem-stage__glow" aria-hidden="true"></span>
+              <span class="emblem-stage__scan" aria-hidden="true"></span>
+              <svg class="emblem-stage__svg" aria-hidden="true"><use href="#cicada-mark"></use></svg>
+              <span class="hud-tag hud-tag--top" dir="ltr">CASE FILE // 3301</span>
+              <span class="hud-tag hud-tag--side" dir="ltr">SIGNAL: ACTIVE</span>
+              <span class="hud-tag hud-tag--bottom" dir="ltr">CYPHER: UNBROKEN</span>
+              <span class="emblem-stage__index" aria-hidden="true">01</span>
+            </div>
+
+            <div class="progress-card">
+              <div class="progress-card__head">
+                <span dir="ltr">CHAIN OF CLUES</span>
+                <span class="progress-card__count">02 / 03</span>
+              </div>
+              <ol class="steps">
+                <li class="done">
+                  <span class="steps__num" dir="ltr">01</span>
+                  <span class="steps__label">بداية التحقيق</span>
+                  <b>مكتمل</b>
+                </li>
+                <li class="active">
+                  <span class="steps__num" dir="ltr">02</span>
+                  <span class="steps__label">مفتاح المرور</span>
+                  <b>الآن</b>
+                </li>
+                <li>
+                  <span class="steps__num" dir="ltr">03</span>
+                  <span class="steps__label">إثبات الوصول</span>
+                  <b>مقفل</b>
+                </li>
+              </ol>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ================= UNLOCKED VIEW ================= -->
+      <section class="view view--unlocked" id="unlockedView" aria-labelledby="unlockedTitle" hidden>
+        <div class="unlocked-watermark" aria-hidden="true">
+          <svg viewBox="0 0 400 400"><use href="#cicada-mark"></use></svg>
+        </div>
+
+        <div class="unlocked-hero">
+          <span class="access-stamp reveal" style="--i: 0;">ACCESS GRANTED</span>
+
+          <p class="eyebrow eyebrow--center reveal" style="--i: 1;">
+            <span class="eyebrow__line"></span>
+            <span class="eyebrow__ar">الملف 3301</span>
+            <span class="eyebrow__sep">/</span>
+            <span class="eyebrow__en" dir="ltr">CASE CLOSED</span>
+            <span class="eyebrow__line eyebrow__line--flip"></span>
+          </p>
+
+          <h1 class="unlocked-title reveal" id="unlockedTitle" tabindex="-1" style="--i: 2;">
+            <span class="unlocked-title__pre">تهانينا… لقد نجحت.</span>
+            أنت لستَ <span class="accent">مشاهداً عادياً.</span>
+          </h1>
+
+          <p class="lead lead--center reveal" style="--i: 3;">
+            لقد أثبتت أنك ذكي… وأنك تتصرف كهاكر محترف. بينما اكتفى الآخرون بالمشاهدة،
+            أنت بحثت عن الأسرار المخبأة في المقطع، وقرأت ما بين السطور.
+          </p>
+
+          <div class="rank-strip reveal" style="--i: 4;" aria-label="تصنيف الوصول">
+            <span><small>الرتبة</small><b>صائد الشيفرات</b></span>
+            <span><small>الحالة</small><b>موثّق</b></span>
+            <span><small>المستوى</small><b>OMEGA</b></span>
+            <span><small>الملف</small><b dir="ltr">0x3301</b></span>
+          </div>
+        </div>
+
+        <div class="dossier-grid">
+          <article class="credential reveal" style="--i: 5;">
+            <header class="credential__head">
+              <span dir="ltr">OPERATIVE FILE</span>
+              <span dir="ltr">SVR-3301-01</span>
+            </header>
+
+            <div class="credential__body">
+              <div class="credential__seal" aria-hidden="true">
+                <span class="credential__seal-ring"></span>
+                <svg><use href="#cicada-mark"></use></svg>
+              </div>
+
+              <dl class="credential__data">
+                <div><dt>المشغّل</dt><dd dir="ltr">SAVER-3301</dd></div>
+                <div><dt>الوضع</dt><dd class="dd--verified"><span></span> VERIFIED</dd></div>
+                <div><dt>الصلاحية</dt><dd dir="ltr">OMEGA / EYES ONLY</dd></div>
+                <div><dt>التوقيع</dt><dd dir="ltr">SIG: 0x3301</dd></div>
+              </dl>
+
+              <div class="credential__barcode" aria-hidden="true"></div>
+
+              <p class="credential__quote">
+                «في عالم مفتوح، كل تفصيل هو باب… والفرق بين المشاهد والمحقق هو الفضول.»
+              </p>
+            </div>
+
+            <footer class="credential__foot">
+              <span dir="ltr">ISSUED BY CYPHER TEAM</span>
+              <span dir="ltr">NO TRACE // NO NOISE</span>
+            </footer>
+          </article>
+
+          <div class="debrief">
+            <article class="debrief__card reveal" style="--i: 6;">
+              <p class="section-label"><span dir="ltr">FINAL DEBRIEF</span></p>
+              <h2>التقرير النهائي</h2>
+              <p>
+                لقد فعلتها. لم تمرّ على المقطع مرور الكرام، بل توقفت عند التفاصيل،
+                بحثت في الزوايا، ووجدت ما لم يره غيرك. هذا ليس حظاً… هذه عقلية محقق.
+              </p>
+            </article>
+
+            <aside class="warning-box reveal" style="--i: 7;" aria-label="تحذير أمني">
+              <div class="warning-box__icon" aria-hidden="true">
+                <svg class="icon"><use href="#icon-shield"></use></svg>
+              </div>
+              <div class="warning-box__content">
+                <span class="warning-box__label" dir="ltr">PROTOCOL 00 // NEVER BREAK</span>
+                <p>لا تنشر معلوماتك على الإنترنت ولا تثق بأحد</p>
+              </div>
+              <span class="warning-box__glow" aria-hidden="true"></span>
+            </aside>
+
+            <section class="proof reveal" style="--i: 8;" aria-labelledby="proofTitle">
+              <div class="proof__head">
+                <span id="proofTitle" dir="ltr">PROOF OF ACCESS</span>
+                <span class="proof__status"><i></i> جاهز للنسخ</span>
+              </div>
+              <p class="proof__instruction">
+                بما أنك وصلت إلى هنا، انسخ هذا النص وأرسله في تعليقات المقطع.
+              </p>
+              <div class="proof__text" id="proofText" dir="rtl"></div>
+              <button class="btn btn--primary btn--copy" id="copyProof" type="button">
+                <span class="btn__label" id="copyLabel">انسخ النص</span>
+                <span class="btn__icon" aria-hidden="true">
+                  <svg class="icon"><use href="#icon-copy"></use></svg>
+                </span>
+                <span class="btn__scan" aria-hidden="true"></span>
+              </button>
+            </section>
+
+            <div class="success-actions reveal" style="--i: 9;">
+              <a class="btn btn--outline" href="https://www.instagram.com/cs_iq0?rpxt=MW5wcmY4NXJvN3Ricw==" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+                <span>افتح المقطع على إنستغرام</span>
+              </a>
+              <button class="btn btn--ghost" id="lockSession" type="button">
+                <svg class="icon" aria-hidden="true"><use href="#icon-lock"></use></svg>
+                <span>إنهاء الجلسة</span>
+              </button>
+            </div>
+
+            <p class="postscript reveal" style="--i: 10;">
+              الدرس الأخير: اللغة التي تعلّمتها هنا ليست الاختراق… بل الملاحظة.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <span class="footer__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><use href="#cicada-mark"></use></svg>
+        </span>
+        <div>
+          <p>© <span id="year">2026</span> <strong>فريق سايڤر</strong> — جميع الحقوق محفوظة.</p>
+          <p class="footer__sub" dir="ltr">CYPHER TEAM // OPEN SOURCE INTELLIGENCE</p>
+        </div>
+      </div>
+
+      <p class="footer__note">صُنع للفضوليين. لا شيء مخفي إلى الأبد.</p>
+
+      <a class="instagram-link" href="https://www.instagram.com/cs_iq0?rpxt=MW5wcmY4NXJvN3Ricw==" target="_blank" rel="noopener noreferrer" aria-label="حساب فريق سايڤر على إنستغرام">
+        <span class="instagram-link__icon">
+          <svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg>
+        </span>
+        <span class="instagram-link__text">
+          <small>تابعنا على إنستغرام</small>
+          <span dir="ltr">@cs_iq0</span>
+        </span>
+      </a>
+    </footer>
+  </div>
+
+  <!-- ============ HINT MODAL ============ -->
+  <div class="modal" id="hintModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="true"></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="hintTitle" aria-describedby="hintText">
+      <span class="corner corner--tl" aria-hidden="true"></span>
+      <span class="corner corner--tr" aria-hidden="true"></span>
+      <span class="corner corner--bl" aria-hidden="true"></span>
+      <span class="corner corner--br" aria-hidden="true"></span>
+
+      <button class="modal__close" type="button" data-close="true" aria-label="إغلاق التلميح">
+        <svg class="icon" aria-hidden="true"><use href="#icon-x"></use></svg>
+      </button>
+
+      <div class="modal__sigil" aria-hidden="true">
+        <svg class="icon"><use href="#icon-eye"></use></svg>
+      </div>
+
+      <p class="modal__eyebrow" dir="ltr">ENCRYPTED HINT // HNT-3301</p>
+      <h2 class="modal__title" id="hintTitle">تلميح مسرّب</h2>
+
+      <blockquote class="modal__text" id="hintText">
+        «المفتاح موجود في ثمنيل المقطع حاول تلاقيه!»
+      </blockquote>
+
+      <p class="modal__sub">الثمبنيل هو الصورة المصغّرة التي تظهر قبل تشغيل المقطع. افتحها بالحجم الكامل وافحص كل زاوية.</p>
+
+      <button class="btn btn--ghost modal__action" type="button" data-close="true">
+        <span>فهمت… سأبحث</span>
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow"></use></svg>
+      </button>
+
+      <span class="modal__scan" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <style>
+      .loader { display: none !important; }
+      #challengeView[hidden], #unlockedView[hidden] { display: none !important; }
+      .js .reveal { opacity: 1 !important; transform: none !important; }
+      .blood-top { opacity: .55; }
+    </style>
+  </noscript>
+
+  <script>
+    /* شبكة أمان: لا تدع شاشة التحميل تحجب الموقع لو تعطّل السكربت لأي سبب. */
+    window.setTimeout(function () {
+      var loader = document.getElementById('loader');
+      if (loader && !loader.hidden) {
+        loader.style.display = 'none';
+        loader.setAttribute('aria-hidden', 'true');
+        document.documentElement.classList.remove('is-loading');
+        var app = document.getElementById('app');
+        if (app) {
+          app.classList.add('is-ready');
+          app.inert = false;
+        }
+      }
+    }, 12000);
+  </script>
+  <script src="app.js" defer></script>
+</body>
+</html>
